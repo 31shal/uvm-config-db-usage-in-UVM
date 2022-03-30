@@ -18,7 +18,7 @@ endfunction
 
 task run_phase(uvm_phase phase);
 phase.raise_objection(this);
-seq.start(env.agent.sequencer);
+  seq.start(env.agent.m_sequencer);
 phase.drop_objection(this);
 endtask
 
