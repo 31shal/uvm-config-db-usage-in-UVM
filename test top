@@ -16,6 +16,11 @@ end
 end
 initial begin 
 uvm_config_db #(virtual mem_if)::set(null,"*","vintf", intf);
+run_test("base_test");
+end
+initial begin
+$dumpvars;
+$dumpfile("dump.vcd");
 end
 
 endmodule
