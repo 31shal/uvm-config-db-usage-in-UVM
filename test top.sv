@@ -4,7 +4,7 @@ module test_top;
 logic clk;
 logic reset;
 mem if intf(.clk(clk),.reset(reset));
-memory_dut(.clk(intf.clk),.reset(intf.reset),.addr(intf.addr).write_data(intf.write_data),.read_data(intf.read_data),wren(intf.wren),rden(intf.rden));
+memory_dut(.clk(intf.clk),.reset(intf.reset),.addr(intf.addr).write_data(intf.write_data),.read_data(intf.read_data),wren(intf.wren),rden(intf.rden), .valid(intf.valid));
 initial begin
 clk=0;
 reset = 0;
